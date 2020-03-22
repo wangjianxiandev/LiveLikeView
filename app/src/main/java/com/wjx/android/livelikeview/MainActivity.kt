@@ -19,12 +19,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initView() {
-        live_view.addLikeImage(getDrawable(R.drawable.heart0))
-        live_view.addLikeImage(getDrawable(R.drawable.heart1))
-        live_view.addLikeImage(getDrawable(R.drawable.heart2))
-        live_view.addLikeImage(getDrawable(R.drawable.heart3))
-        live_view.addLikeImage(getDrawable(R.drawable.heart4))
-        live_view.addLikeImage(getDrawable(R.drawable.heart5))
-        live_view.addLikeImage(getDrawable(R.drawable.heart6))
+        live_view.addLikeImage(getDrawable(R.drawable.zan0))
+        live_view.addLikeImage(getDrawable(R.drawable.zan1))
+        live_view.addLikeImage(getDrawable(R.drawable.zan2))
+        live_view.addLikeImage(getDrawable(R.drawable.zan3))
+        live_view.addLikeImage(getDrawable(R.drawable.zan4))
+        live_view.addLikeImage(getDrawable(R.drawable.zan5))
+        live_view.addLikeImage(getDrawable(R.drawable.zan6))
     }
 }
