@@ -10,11 +10,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        initView()
+        initView()
         live_view_single.setOnClickListener({
             clickCount++
             live_view.addLikeView()
-            click_count.setText(clickCount.toString())
+//            click_count.setText(clickCount.toString())
         })
     }
 

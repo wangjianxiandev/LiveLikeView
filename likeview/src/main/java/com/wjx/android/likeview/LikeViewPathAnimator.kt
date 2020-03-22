@@ -75,7 +75,6 @@ class LikeViewPathAnimator internal constructor(enterDuration: Int, curveDuratio
         enterAnimation.setInterpolator(CustomScaleInterpolator(0.5f))
         enterAnimation.playTogether(alpha, scaleX, scaleY)
         enterAnimation.duration = mEnterDuration.toLong()
-        enterAnimation.setTarget(target)
         return enterAnimation
     }
 
@@ -96,19 +95,18 @@ class LikeViewPathAnimator internal constructor(enterDuration: Int, curveDuratio
                 (mViewHeight - mPicHeight).toFloat()
             ),
             PointF(
-                (mViewWidth / 2 + (if (mRandom.nextBoolean()) 1 else -1) * mRandom.nextInt(100)).toFloat(),
+                ((mViewWidth - mPicWidth)/ 2 + (if (mRandom.nextBoolean()) 1 else -1) * mRandom.nextInt(100)).toFloat(),
                 0.0f
             )
         )
-        valueAnimator.duration = 3000
+        valueAnimator.duration = mCurveDuration.toLong()
         valueAnimator.addUpdateListener({
             val pointF = it.animatedValue as PointF
             target.setX(pointF.x)
             target.setY(pointF.y)
-            // 改变对象的透明度
+            // 跟随属性动画执行进度改变对象的透明度
             ViewCompat.setAlpha(target, 1 - it.animatedFraction)
         })
-        valueAnimator.setTarget(target)
 
         return valueAnimator
     }

@@ -24,13 +24,11 @@ class LikeView @JvmOverloads constructor(
     private var mLikeDrawables: MutableList<Int>? = null
     private var mLayoutParams: LayoutParams? = null
     private var mLikeViewPathAnimator: LikeViewPathAnimator? = null
-    private var isUseDefault = false;
     private fun init(defaultFavor: Int, enterDuration: Int, curveDuration: Int) {
         var defaultFavor = defaultFavor
         mLikeDrawables = ArrayList()
         if (defaultFavor == -1) {
             defaultFavor = R.drawable.zan0
-            isUseDefault = true
         }
         val drawable: Drawable = BitmapDrawable(
             resources,
@@ -41,7 +39,7 @@ class LikeView @JvmOverloads constructor(
         val picHeight = drawable.intrinsicHeight
 
         // 初始化布局参数
-        mLayoutParams = LayoutParams(picWidth - 10, picHeight - 10)
+        mLayoutParams = LayoutParams(picWidth+10, picHeight+10)
         mLayoutParams!!.addRule(CENTER_HORIZONTAL)
         mLayoutParams!!.addRule(ALIGN_PARENT_BOTTOM)
         mLikeViewPathAnimator = LikeViewPathAnimator(enterDuration, curveDuration)
@@ -72,7 +70,7 @@ class LikeView @JvmOverloads constructor(
 
     fun addLikeView() {
         val likeView = ImageView(context)
-        likeView.setImageResource( if (isUseDefault) R.drawable.zan0 else
+        likeView.setImageResource(
             mLikeDrawables!![mLikeViewPathAnimator!!.mRandom.nextInt(
                 mLikeDrawables!!.size
             )]
