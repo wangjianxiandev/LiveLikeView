@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LikeView">
+        <!--参考资源id-->
+        <attr name="default_image" format="reference" />
+        <!--进场动画时延-->
+        <attr name="enter_duration" format="integer" />
+        <!--贝塞尔曲线动画-->
+        <attr name="curve_duration" format="integer" />
+    </declare-styleable>
+</resources>
