@@ -13,6 +13,6 @@ allprojects {
 ### 引入项目
 ```
 dependencies {
-	implementation 'com.github.wangjianxiandev:LiveLikeView:v1.0.0'
+	implementation 'com.github.wangjianxiandev:LiveLikeView:v1.0.1'
 }
 ```
