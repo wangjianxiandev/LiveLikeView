@@ -13,6 +13,7 @@ allprojects {
 ### 引入项目
 ```
 dependencies {
-     implementation 'com.github.wangjianxiandev:LiveLikeView:Tag'
+	implementation 'com.github.wangjianxiandev:LiveLikeView:v1.0.0'
 }
 ```
+#### 注意：该版本的点赞图标出现位置有些不正确，后续版本将会更正，也期待大家提出建议
